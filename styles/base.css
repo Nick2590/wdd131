@@ -1,0 +1,101 @@
+:root {
+    --primary-color: #8dbfde;
+    --secondary-color: #2cb5ae;
+    --accent-color: #2e3f56;
+    --text-color: #ffffff;
+}
+
+body {
+    display: grid;
+    background-color: var(--primary-color);
+    grid-template-areas: 
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-template-columns: 2fr 5fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*header*/
+header {
+    grid-area: header;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+/*span {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+}*/
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    gap: 15px;  
+    padding: 20px;
+    grid-area: nav;
+    background-color: var(--accent-color);
+}
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+/*main content*/
+h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+
+    grid-column: 1 / 65;
+}
+h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+main {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+.card {
+    display: grid;
+    padding: 20px;
+    grid-row: 2/ 3;
+    grid-column: 1 / 45;
+}
+img {
+    width: 100px;
+    height: auto;
+    justify-self: center;
+    border: var(--secondary-color) 2px solid;
+}
+.about {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr auto 1fr;
+    justify-self: center;
+}
+
+aside {
+    padding: 20px;
+    grid-row: 2 / 3;
+    grid-column: 45 / 65;
+    justify-self: center;
+}
+
+
+
+
+footer {
+    grid-area: footer;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--secondary-color);
+}
