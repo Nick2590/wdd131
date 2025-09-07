@@ -12,7 +12,9 @@ body {
         "main"
         "footer";
     grid-template-rows: auto 1fr auto;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:"Libertinus Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
     background-color: var(--primary-color);
 }
@@ -66,7 +68,7 @@ main {
 
 /* Card sections */
 .card {
-    background-color: #fff;
+    background-color: var(--primary-color)
     color: #000;
     padding: 20px;
     border: 2px solid var(--secondary-color);
@@ -95,7 +97,7 @@ aside {
     padding: 20px;
     border: 2px solid var(--secondary-color);
     border-radius: 8px;
-    background-color: #fff;
+    background-color: var(--primary-color);
 }
 
 aside h2 {
