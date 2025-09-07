@@ -68,8 +68,7 @@ main {
 
 /* Card sections */
 .card {
-    background-color: var(--primary-color)
-    color: #000;
+    background-color: var(--primary-color);
     padding: 20px;
     border: 2px solid var(--secondary-color);
     border-radius: 8px;;
