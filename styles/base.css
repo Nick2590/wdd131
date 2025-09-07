@@ -7,95 +7,142 @@
 
 body {
     display: grid;
-    background-color: var(--primary-color);
-    grid-template-areas: 
-        "header header header"
-        "nav main aside"
-        "footer footer footer";
-    grid-template-columns: 2fr 5fr 2fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
     grid-template-rows: auto 1fr auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--primary-color);
 }
-/*header*/
+
+/* Header */
 header {
     grid-area: header;
-    padding: 20px;
     text-align: center;
     background-color: var(--secondary-color);
+    padding: 20px;
 }
-/*span {
-    display: block;
-    font-size: 1.5em;
-    font-weight: bold;
-}*/
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation */
 nav {
     display: flex;
-    flex-direction: row;
-    justify-content:space-evenly;
-    gap: 15px;  
-    padding: 20px;
-    grid-area: nav;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
     background-color: var(--accent-color);
+    justify-content: space-evenly;
 }
-nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-}
-/*main content*/
-h1 {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    width: 100%;
 
-    grid-column: 1 / 65;
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
 }
-h2 {
-    margin: 0;
-    padding: 0;
-    text-align: center;
+
+nav a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
 }
+
+/* Main layout */
 main {
+    grid-area: main;
     display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: auto auto auto;
+    grid-template-areas: 
+        "content aside";
+    grid-template-columns: 2fr 1fr;
     gap: 20px;
     padding: 20px;
-    width: 100%;
 }
+
+/* Card sections */
 .card {
-    display: grid;
+    background-color: #fff;
+    color: #000;
     padding: 20px;
-    grid-row: 2/ 3;
-    grid-column: 1 / 45;
-}
-img {
-    width: 100px;
-    height: auto;
-    justify-self: center;
-    border: var(--secondary-color) 2px solid;
-}
-.about {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 1fr auto 1fr;
-    justify-self: center;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;;
 }
 
-aside {
-    padding: 20px;
-    grid-row: 2 / 3;
-    grid-column: 45 / 65;
-    justify-self: center;
-}
-
-
-
-
-footer {
-    grid-area: footer;
-    padding: 10px;
+.card h2 {
     text-align: center;
     background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+/* Images */
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Aside */
+aside {
+    grid-area: aside;
+    padding: 20px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+aside h2 {
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 90%;
+
+}
+
+aside ul li {
+    margin: 5px 0;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: var(--accent-color);
+    display: block;
+    padding: 10px 20px;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    transition: background 0.3s, background-color 0.3s, color 0.3s;
+}
+
+aside ul li a:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-color: var(--second-color);
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px;
 }
