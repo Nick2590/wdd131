@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> WDD 131 - Nicholas Goodsell - Phoenix, Arizona</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Phoenix, Arizona</h1>
+  </header>
+
+  <!-- Hero Section with overlay cards in large view -->
+  <section class="hero">
+    <picture>
+      <source srcset="images/arizona_place.jpg" media="(min-width: 600px)">
+      <img src="images/arizona_place.jpg" alt="Phoenix Skyline with desert background">
+    </picture>
+
+    <div class="overlay data">
+      <h2>Data</h2>
+      <ul>
+        <li><strong>Area:</strong> 1,338 sq km</li>
+        <li><strong>Population:</strong> 1,644,409</li>
+        <li><strong>State Capital:</strong> Arizona</li>
+        <li><strong>Languages:</strong> English, Spanish</li>
+        <li><strong>Currency:</strong> U.S. Dollar</li>
+        <li><strong>Time Zone:</strong> UTC−7 (MST)</li>
+        <li><strong>Calling Code:</strong> +1</li>
+        <li><strong>Internet TLD:</strong> .us</li>
+      </ul>
+    </div>
+
+    <div class="overlay weather">
+      <h2>Weather</h2>
+      <img class="weather-icon" src="images/weather.png" alt="Weather Icon">
+      <p><strong>Temperature:</strong> <span id="temp">95</span> °F</p>
+      <p><strong>Conditions:</strong> Sunny</p>
+      <p><strong>Wind:</strong> <span id="wind">8</span> mph</p>
+      <p><strong>Wind Chill:</strong> <span id="windchill">N/A</span></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> 🌵 Nicholas Goodsell Phoenix, Arizona 🌞</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
