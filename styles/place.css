@@ -44,7 +44,7 @@ header {
   margin-left: 0.5rem;
 }
 
-.weather .weather-icon {
+.weather svg {
   width: 50px;
   margin: 0.5rem 0;
   display: block;
