@@ -1,13 +1,5 @@
 // Temple data
 const temples = [
-  
-  {
-    templeName: "Test Temple",
-    location: "Test City",
-    dedicated: "2000, January, 1",
-    area: 12345,
-    imageUrl: "https://picsum.photos/400/250?random=99"
-  },
 
 
   {
